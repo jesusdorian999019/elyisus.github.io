@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(imagenes/gymfondo.jpg);
+    background-repeat: no-repeat;/* hago que la imagen no se repita*/
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+  /*hago que la imagen se quede estatica y no tenga ese aspecto basico*/
+}
+a{
+    text-decoration: none;
+    color: rgb(237, 234, 234);
+}
+header{
+    display: flex;
+    min-height: 70px;
+    /*background-color: aquamarine;*/
+    backdrop-filter: blur(60px);
+    box-shadow: 0 15px 10px 1px rgba(151, 136, 126, 0.457);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 90px;
+    margin-right: 10px;
+}
+
+
+.nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.nav a:hover{
+    color: white;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+    .titulodefondo {
+        font-size: 1.2rem;
+        padding-top: 1em;  
+        }
+    .textodefondo {
+        font-size: 16px; 
+        padding-top: 1em; 
+        }
+      
+}
+.titulodefondo{
+    /*estoy usando los tipos de fuente ,estas las saque de google font */
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+    /*color: rgb(43, 31, 31);*/
+    text-align: center;
+    padding-top: 2em;
+    text-shadow: 3px 5px 5px rgb(255, 230, 0);
+    font-size: 40px;
+}
+.textodefondo{
+    /*color: rgb(247, 244, 244);*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    text-align: center;
+    padding-top: 2em;
+}
+
+.nombre-empresa
+{
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+/* en los h3 no le vi la necedidad de ponerlos en clases ya que en esta la idea es menos es mejor
+y mejorar en el menos*/
+h3{
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+    font-size: 30px;
+}
+/*recuadros*/
+.contenedor{
+    backdrop-filter: blur(60px);
+    box-shadow:  1px 13px 7px rgb(31, 22, 16);
+    width: 80%;
+    max-width: 200px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(246, 244, 246, 0.661);
+    
+
+}
+.contenedor2{
+    backdrop-filter: blur(60px);
+    box-shadow:  1px 13px 7px rgba(55, 45, 39, 0.271);
+    width: 90px%;/*en este caso usare el % para que la pantalla se ajuste */
+    max-width: 200px;/*este sera su maximo*/
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(221, 212, 224);
+    
+}
+.contenedor3{
+    backdrop-filter: blur(60px);
+    box-shadow:  1px 13px 7px rgba(55, 45, 39, 0.271);
+    width: 80%;/*en este caso usare el % para que la pantalla se ajuste */
+    max-width: 200px;/*este sera su maximo*/
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(221, 212, 224);
+    margin-bottom: 20px
+    
+}
+
+.imagen2
+{
+    border-radius: 20px;
+    border: none;
+    width: 20%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+
+}

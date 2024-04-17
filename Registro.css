@@ -1,0 +1,200 @@
+    /*inportamos usando el import y la url o link*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/*restablezco valores de pagina a 0*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/*cuerpo
+aca ajustare su tamaño dandole */
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(imagenes/gymfondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/*en la parte del fondo simplemente modifique el cuerpo para que este este centrado junto con su contenido
+a su vez hize que el fondo sea estatico y no se mueva ni se respita*/
+/*paso a modificar el contenedor*/
+.contenedor {
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    padding:20px;
+    gap:10px;
+    width: 1000px;
+}
+/*modifico la informacion que estara en el lado izquierdo, esta contiene 
+mis datos junto al numero*/
+.info-en-la-caja {
+    color:#fff;
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+/*modificando el h1 de la caja*/
+.info-en-la-caja > h1 {
+    text-align: left;
+    letter-spacing: 5px;
+}
+/*modificare los datos
+mas que nada los valores de la izquierda y los hipervinculos donde 
+le metere colores
+aun esta en proceso, pero para el lunes en la mañana ya terminare*/
+.datos {
+    display: flex;
+    flex-direction: column;
+    gap:25px
+}
+
+.datos > p {
+    font-size: 1rem;
+}
+
+.datos > p > i {
+    color:crimson;
+    margin-right: 10px;
+    font-size:25px;
+}
+
+/*modificacion de los hipervinculos
+junto a sus iconos*/
+
+.links {
+    display:flex;
+    gap:15px;
+}
+
+.links > a {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background: crimson;
+    text-align: center;
+    transition: .1s;
+}
+
+.links > a > i {
+    color:#fff;
+    line-height: 40px;
+    font-size: 20px;
+}
+/*formularios en general
+este estara en la derecha*/
+form {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    gap:15px;
+}
+/*modificaion de los form que en este caso le asigno el texto de entrada*/
+.texto-de-entrada {
+    position:relative;
+}
+/*entrada dentro del texto de entrada*/
+.texto-de-entrada > input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    outline:none;
+    background: rgba(255 255 255 / .1);
+    border:3px solid transparent;
+    letter-spacing: 1px;
+    transition:.3s;
+    color:#fff;
+    
+}
+/*letra de fondo*/
+.texto-de-entrada > input::placeholder,
+.texto-de-entrada > textarea::placeholder {
+    color:#a3a3a3;
+    
+}
+/*modificacion de los fondo de texto*/
+.texto-de-entrada > input:focus::placeholder,
+.texto-de-entrada > textarea:focus::placeholder {
+    color:transparent;
+}
+
+.texto-de-entrada > input:focus,
+.texto-de-entrada > textarea:focus {
+    border-bottom:3px solid crimson;
+    animation: shake .2s;
+}
+/*modificando el area de texto*/
+.texto-de-entrada > textarea {
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    background: rgba(255 255 255 / .1);
+    border:3px solid transparent;
+    letter-spacing: 1px;
+    outline: none;
+    transition:.3s;
+    color:#fff;
+    letter-spacing: 1.5px;
+}
+
+/*modificando los iconos del texto que estan a la derecha actualmente*/
+.texto-de-entrada > i {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color:rgba(255 255 255 / .3);
+    transition: .3s;
+}
+
+.texto-de-entrada > input:focus ~ i {
+    color:crimson;
+}
+/*aca modifico el boton de envio cuando este recien cargo 
+en pocas palabras el boton se vera de este color al inicio*/
+form > button {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: crimson;
+    color:#fff;
+    border:none;
+    transition: .1s;
+    cursor: pointer;
+    font-size: 1rem;
+}
+/*modificando el boton de envio cuando este ya este hecho*/
+form > button:hover,
+.links > a:hover {
+    background: rgb(179, 27, 27);
+}
+/*dandole mariconadas
+este es un estilo de vibracion para los recuadros*/
+@keyframes shake { 
+    0%, 100% {transform: translateX(0);} 
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
+    20%, 40%, 60%, 80% {transform: translateX(10px);} 
+ }
+
+/*configuracion para que este sea ajustable
+a cada pagina 
+(no salio bien pero aun esta en desarrolloñ)*/
+@media screen and (max-width:600px) {
+    .container {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .info-en-la-caja {
+        gap:15px;
+    }
+
+    .info-en-la-caja > h1 {
+        font-size: 1.5rem;
+    }
+}

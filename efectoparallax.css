@@ -1,0 +1,189 @@
+/*reiniciare los estilos para que el efecto no tenga problema
+con esto me refiero a que la pagina tendra valores en cero  */
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(249, 246, 246);
+}
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(17, 13, 13);
+    backdrop-filter: blur(60px);
+    box-shadow: 0 15px 10px 1px rgba(230, 220, 214, 0.457);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 90px;
+    margin-right: 10px;
+}
+
+
+.nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.nav a:hover{
+    color: rgb(254, 254, 254);
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+.titulodefondo{
+    color: rgb(255, 253, 253);
+    text-align: center;
+    padding-top: 2em;
+}
+.textodefondo{
+    font-size: 20px;
+    color: rgb(251, 238, 238);
+    text-align: center;
+    padding-top: 2em;
+}
+/*comenzamos la modificacion de los textos en parallax*/
+main{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+section
+{
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 400%;
+
+
+}
+.tituloinicial
+{
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+.no-parallax
+{
+    /*background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(imagenes/gymfondo.jpg);
+    background-size: cover;*/
+    background-color: rgb(255, 0, 0);
+    z-index: 999;
+}
+
+.parallax h1{
+    width: 60%;
+    font-size: 2rem;
+}
+
+.parallax::after
+{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateZ(-1px) sclale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg::after
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(imagenes/gymdoce.jpg);
+    /*background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    background-size: cover;
+}
+
+
+.no-parallax
+{
+    /*background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(imagenes/gymfondo.jpg);
+    background-size: cover;*/
+    background-color: rgb(20, 15, 15);
+    z-index: 999;
+}
+
+.parallax h1{
+    width: 80%;
+    font-size: 2rem;
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parallax::after
+{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateZ(-1px) sclale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg1::after
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(imagenes/gymfondo.jpg);
+    background-size: cover;
+}
+
+.bg2::after
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(imagenes/gym2021.jpg);
+    background-size: cover;
+}
+.letra3
+{
+    text-align: left;
+}
+/*en los 3 primeros cuadros de parallax cree el diseño
+jugue un poco al entender el como servia y se podia ser ajustable 
+pero creo que me salio bine */
+@media (max-width: 768px){
+    ,my.image
+}
